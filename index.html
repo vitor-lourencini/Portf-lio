@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,8 @@
 <img src="eu.png"> <img src="familia.png"> <br>
 <p>À esquerda, minha melhor foto. À direita, a melhor representação de amor para mim.</p>
 <p>Minha linha do tempo como estudante:</p>
-<ol>
+<button type="button" id="btn-linha-tempo" class="btn-js" aria-expanded="true" aria-controls="linha-tempo">Ocultar linha do tempo</button>
+<ol id="linha-tempo">
     <li>Creché Sinhá Rosa</li>
     <li>Pre Escola Municipal Franz Gaismayer</li>
     <li>E.M.E.F. Rosita Salvador Cardoso</li>
@@ -77,21 +78,20 @@ width="560" height="315" src="https://www.youtube.com/embed/BqXJdDtOtHk?si=hAVnl
             </tr>
         </thead>
     </table>
-</table>
 <h1>Deixe suas informações para contato!</h1>
 <hr>
-<form>
+<form id="form-contato" novalidate>
     <div class="campos">
         <div>
 <p>
     <label for="txtnomecompleto">Nome Completo</label> <br>
-    <input type="text" name="NomeCompleto " id="txtnomecompleto" required>
+    <input type="text" name="NomeCompleto" id="txtnomecompleto" required>
 </p>
 </div>
 <div>
 <p>
     <label for="txtemail">E-mail</label> <br>
-    <input type="email" name="Email" id="textemail" required>
+    <input type="email" name="Email" id="txtemail" required>
 </p>
 </div>
 <div>
@@ -102,6 +102,7 @@ width="560" height="315" src="https://www.youtube.com/embed/BqXJdDtOtHk?si=hAVnl
 </div>
 </div>
 <button type="submit">Enviar</button>
+<p id="mensagem-form" role="status" aria-live="polite"></p>
 </form>
 </section>
 <section id="rodape">
@@ -109,9 +110,10 @@ width="560" height="315" src="https://www.youtube.com/embed/BqXJdDtOtHk?si=hAVnl
   <p>&copy; 2026 João Vitor. Todos os direitos reservados.</p>
   <nav>
     <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-lourencini-472a92430/">LinkedIn</a>
-    <a href="vitor_lourencini@outlook.com">E-mail</a>
+    <a href="mailto:vitor_lourencini@outlook.com">E-mail</a>
   </nav>
 </footer>
 </section>
+<script src="script.js"></script>
 </body>
 </html>

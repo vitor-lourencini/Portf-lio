@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -62,7 +66,8 @@ body {
 #sobre-mim {
     background-color: gray;
     background-size: cover;
-    height: 135vh;
+    min-height: 135vh;
+    padding-bottom: 60px;
 }
 
 #sobre-mim h1 {
@@ -103,7 +108,8 @@ iframe {
     margin-bottom: -100px;
 }
 #mais {
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 60px;
     background-color: darkgrey;
     background-size: cover;
 }
@@ -173,4 +179,160 @@ iframe {
 
 #rodape footer a:hover {
   color: #c9762f;
+}
+
+/* ===== Interatividade (JavaScript) ===== */
+.oculto {
+    display: none !important;
+}
+
+.btn-js {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px 28px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: rgb(221, 119, 3);
+    cursor: pointer;
+}
+
+.btn-js:hover {
+    color: white;
+    background-color: black;
+}
+
+#mensagem-form {
+    margin-top: 20px;
+    font-size: 22px;
+    min-height: 30px;
+}
+
+#mensagem-form.sucesso {
+    color: darkgreen;
+}
+
+#mensagem-form.erro {
+    color: darkred;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 900px) {
+    #navigation nav ul {
+        gap: 24px;
+        padding: 16px;
+    }
+
+    .text-home {
+        transform: translateY(30vh);
+        font-size: 30px;
+        padding: 0 16px;
+    }
+
+    #home h1 {
+        -webkit-text-stroke: 2px black;
+    }
+
+    #home h2 {
+        font-size: 22px;
+    }
+
+    #sobre-mim {
+        height: auto;
+        min-height: 0;
+        padding: 90px 16px 40px;
+    }
+
+    #sobre-mim h1 {
+        transform: none;
+        font-size: 24px;
+    }
+
+    #sobre-mim img {
+        display: block;
+        width: 80%;
+        max-width: 340px;
+        margin: 24px auto 0;
+    }
+
+    #sobre-mim p {
+        margin-top: 24px;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    #sobre-mim ol {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: fit-content;
+        margin: 0 auto 30px;
+        padding-left: 24px;
+    }
+
+    iframe {
+        display: block;
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin: 20px auto 0;
+    }
+
+    #mais {
+        min-height: 0;
+        padding: 90px 16px 40px;
+    }
+
+    #mais table {
+        width: 100%;
+        font-size: 16px;
+        transform: none;
+    }
+
+    #mais th, td {
+        padding: 8px;
+    }
+
+    #mais h1 {
+        font-size: 28px;
+        margin-top: 50px;
+    }
+
+    #mais form {
+        font-size: 22px;
+    }
+
+    .campos {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    #mais input {
+        width: 100%;
+        max-width: 320px;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #navigation nav ul {
+        gap: 14px;
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .text-home {
+        font-size: 22px;
+    }
+
+    #home h2 {
+        font-size: 18px;
+    }
+
+    #mais table {
+        font-size: 13px;
+    }
 }
